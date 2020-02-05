@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jqw-cA-R1B">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Restaurants-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LFRestaurantListViewController" customModule="LieferandoAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NSh-9a-Olv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LFRestaurantTableViewCell" rowHeight="139" id="lNY-em-g9F" customClass="LFRestaurantTableViewCell" customModule="LieferandoAssignment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="139"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lNY-em-g9F" id="SoX-xc-Zrd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="139"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6A-iY-sWe">
+                                                    <rect key="frame" x="20" y="20" width="45.5" height="78.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FREE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yF7-AD-O6s">
+                                                    <rect key="frame" x="182" y="108.5" width="50" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="2Z0-S2-qxK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qp7-78-hn2" customClass="StarRatingView" customModule="LieferandoAssignment" customModuleProvider="target">
+                                                    <rect key="frame" x="289" y="49.5" width="105" height="20"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="105" id="djC-X9-loE"/>
+                                                        <constraint firstAttribute="height" constant="20" id="ldS-Lu-JDa"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                            <color key="value" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="current">
+                                                            <real key="value" value="3.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="min">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="max">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="point">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Ahead" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5k-cH-pQg">
+                                                    <rect key="frame" x="20" y="108.5" width="90.5" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.5" id="BK6-ht-AIc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min 6,00 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bem-8N-XG7">
+                                                    <rect key="frame" x="289" y="108.5" width="63.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L3D-PL-BiT">
+                                                    <rect key="frame" x="259" y="49.5" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="EJd-tE-Ov1"/>
+                                                        <constraint firstAttribute="height" constant="20" id="nb8-yP-Vhc"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="qp7-78-hn2" secondAttribute="trailing" constant="20" id="6pG-id-EQw"/>
+                                                <constraint firstItem="qp7-78-hn2" firstAttribute="centerY" secondItem="O6A-iY-sWe" secondAttribute="centerY" id="EEt-oK-Uqm"/>
+                                                <constraint firstItem="Bem-8N-XG7" firstAttribute="leading" secondItem="qp7-78-hn2" secondAttribute="leading" id="GOg-Hg-37E"/>
+                                                <constraint firstItem="b5k-cH-pQg" firstAttribute="top" secondItem="O6A-iY-sWe" secondAttribute="bottom" constant="10" id="Grq-Na-acf"/>
+                                                <constraint firstItem="b5k-cH-pQg" firstAttribute="leading" secondItem="SoX-xc-Zrd" secondAttribute="leading" constant="20" id="R0k-j3-RIo"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Bem-8N-XG7" secondAttribute="trailing" constant="10" id="V1a-7s-51s"/>
+                                                <constraint firstItem="L3D-PL-BiT" firstAttribute="centerY" secondItem="O6A-iY-sWe" secondAttribute="centerY" id="Y9x-VU-vGy"/>
+                                                <constraint firstItem="yF7-AD-O6s" firstAttribute="centerX" secondItem="SoX-xc-Zrd" secondAttribute="centerX" id="aSU-Qc-kqc"/>
+                                                <constraint firstItem="Bem-8N-XG7" firstAttribute="centerY" secondItem="yF7-AD-O6s" secondAttribute="centerY" id="fJb-ot-5N4"/>
+                                                <constraint firstItem="O6A-iY-sWe" firstAttribute="top" secondItem="SoX-xc-Zrd" secondAttribute="top" constant="20" id="k22-Nv-Hp2"/>
+                                                <constraint firstItem="yF7-AD-O6s" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="b5k-cH-pQg" secondAttribute="trailing" constant="10" id="kHh-Wf-ocm"/>
+                                                <constraint firstAttribute="bottom" secondItem="b5k-cH-pQg" secondAttribute="bottom" constant="10" id="qSQ-Sc-99u"/>
+                                                <constraint firstItem="qp7-78-hn2" firstAttribute="leading" secondItem="L3D-PL-BiT" secondAttribute="trailing" constant="10" id="rbg-If-fs1"/>
+                                                <constraint firstItem="O6A-iY-sWe" firstAttribute="leading" secondItem="SoX-xc-Zrd" secondAttribute="leading" constant="20" id="sXN-of-qxx"/>
+                                                <constraint firstItem="yF7-AD-O6s" firstAttribute="centerY" secondItem="b5k-cH-pQg" secondAttribute="centerY" id="wid-Eb-ek6"/>
+                                                <constraint firstItem="L3D-PL-BiT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="O6A-iY-sWe" secondAttribute="trailing" constant="10" id="yar-rG-lol"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" label="RestaurantCell">
+                                            <accessibilityTraits key="traits" none="YES"/>
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="restaurantTableViewCell"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="imgFavourtie" destination="L3D-PL-BiT" id="YCY-w3-EJ1"/>
+                                            <outlet property="lblDeliveryFee" destination="yF7-AD-O6s" id="dxI-sO-f8a"/>
+                                            <outlet property="lblMinCost" destination="Bem-8N-XG7" id="mmA-1L-Idz"/>
+                                            <outlet property="lblName" destination="O6A-iY-sWe" id="FuV-29-BO4"/>
+                                            <outlet property="lblStatus" destination="b5k-cH-pQg" id="rhI-E9-xY9"/>
+                                            <outlet property="ratingView" destination="qp7-78-hn2" id="bN4-p6-CNK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="RestautantsTableview"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="CaO-0v-49x"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5E0-aH-ygl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NSh-9a-Olv" secondAttribute="bottom" id="85B-60-1us"/>
+                            <constraint firstItem="NSh-9a-Olv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XVM-7i-tIT"/>
+                            <constraint firstItem="NSh-9a-Olv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="r6M-Bs-Wht"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NSh-9a-Olv" secondAttribute="trailing" id="sbB-6p-uSB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="icn-dashboard" id="pSB-5w-vGQ"/>
+                    <navigationItem key="navigationItem" title="Restaurants" id="kKO-3w-tab"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="favouriteRestaurantsSegmentControl" destination="Wqt-rN-Z8h" id="3yr-GW-Fv0"/>
+                        <outlet property="restaurantsFilterText" destination="ktX-E6-hU6" id="YJ3-te-jSv"/>
+                        <outlet property="restaurantsFilterTextField" destination="lSO-2m-dZA" id="oqc-BP-awU"/>
+                        <outlet property="restaurantsTableView" destination="NSh-9a-Olv" id="xb5-P0-uvr"/>
+                        <outlet property="restaurantsTableViewHeader" destination="BmO-Mj-RSb" id="15A-bU-jBO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="BmO-Mj-RSb">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lSO-2m-dZA">
+                            <rect key="frame" x="10" y="10" width="344" height="30"/>
+                            <accessibility key="accessibilityConfiguration" identifier="FilterTextView"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="etr-sm-ykI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            <connections>
+                                <action selector="enteredTextInSearchBarWithTxtField:" destination="BYZ-38-t0r" eventType="editingChanged" id="HIe-hY-uGM"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Laf-pq-IpK">
+                            <rect key="frame" x="364" y="13" width="40" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="wr8-ZS-56O"/>
+                            </constraints>
+                            <state key="normal" image="icn-filter"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="FilterButton"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="filterButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="QPP-uT-hrX"/>
+                            </connections>
+                        </button>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wqt-rN-Z8h">
+                            <rect key="frame" x="5" y="45" width="404" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="aZO-bU-vry"/>
+                            </constraints>
+                            <segments>
+                                <segment title="Dashboard"/>
+                                <segment title="Favourites"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentControlActionWithSegmentControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="G0U-L3-hMx"/>
+                            </connections>
+                        </segmentedControl>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktX-E6-hU6">
+                            <rect key="frame" x="10" y="80" width="394" height="0.0"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <accessibility key="accessibilityConfiguration" identifier="RestaurantTableHeader"/>
+                    <constraints>
+                        <constraint firstItem="ktX-E6-hU6" firstAttribute="top" secondItem="Wqt-rN-Z8h" secondAttribute="bottom" constant="5" id="2Bz-TA-Shd"/>
+                        <constraint firstItem="Wqt-rN-Z8h" firstAttribute="top" secondItem="lSO-2m-dZA" secondAttribute="bottom" constant="5" id="7Lc-ay-Ydw"/>
+                        <constraint firstItem="ktX-E6-hU6" firstAttribute="leading" secondItem="BmO-Mj-RSb" secondAttribute="leading" constant="10" id="DBw-Wh-EX3"/>
+                        <constraint firstAttribute="trailing" secondItem="Laf-pq-IpK" secondAttribute="trailing" constant="10" id="FOw-TM-Mlc"/>
+                        <constraint firstItem="Wqt-rN-Z8h" firstAttribute="leading" secondItem="BmO-Mj-RSb" secondAttribute="leading" constant="5" id="KPB-NO-Fsc"/>
+                        <constraint firstItem="lSO-2m-dZA" firstAttribute="top" secondItem="BmO-Mj-RSb" secondAttribute="top" constant="10" id="MCh-VR-Arc"/>
+                        <constraint firstItem="Laf-pq-IpK" firstAttribute="centerY" secondItem="lSO-2m-dZA" secondAttribute="centerY" id="VrK-8r-jP5"/>
+                        <constraint firstItem="Laf-pq-IpK" firstAttribute="leading" secondItem="lSO-2m-dZA" secondAttribute="trailing" constant="10" id="WDi-cG-oDg"/>
+                        <constraint firstAttribute="trailing" secondItem="ktX-E6-hU6" secondAttribute="trailing" constant="10" id="hUA-PF-z2D"/>
+                        <constraint firstItem="lSO-2m-dZA" firstAttribute="leading" secondItem="BmO-Mj-RSb" secondAttribute="leading" constant="10" id="lRv-1u-sRO"/>
+                        <constraint firstItem="dMn-2U-eFo" firstAttribute="trailing" secondItem="Wqt-rN-Z8h" secondAttribute="trailing" constant="5" id="vl1-Wt-I5t"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="dMn-2U-eFo"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="77.678571428571431"/>
+        </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="uyr-fQ-ZwR">
+            <objects>
+                <tableViewController storyboardIdentifier="LFFilterViewController" id="OB8-rA-7Ec" customClass="LFFilterViewController" customModule="LieferandoAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Grc-l4-qnu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="XIX-NP-r5Z">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kg-Ew-vdH">
+                                    <rect key="frame" x="364" y="0.0" width="50" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="Obu-xv-rGa"/>
+                                    </constraints>
+                                    <state key="normal" image="icn-close"/>
+                                    <connections>
+                                        <action selector="closeButtonPressed" destination="OB8-rA-7Ec" eventType="touchUpInside" id="Aqt-6H-OjE"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWh-NE-Qw6">
+                                    <rect key="frame" x="179" y="11.5" width="56" height="27.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="0kg-Ew-vdH" secondAttribute="bottom" id="1O8-uC-h0Y"/>
+                                <constraint firstItem="GWh-NE-Qw6" firstAttribute="centerY" secondItem="XIX-NP-r5Z" secondAttribute="centerY" id="Oax-dK-moz"/>
+                                <constraint firstAttribute="height" constant="50" id="WNF-qr-uAn"/>
+                                <constraint firstAttribute="trailing" secondItem="0kg-Ew-vdH" secondAttribute="trailing" id="h1P-qR-5hj"/>
+                                <constraint firstItem="0kg-Ew-vdH" firstAttribute="centerY" secondItem="XIX-NP-r5Z" secondAttribute="centerY" id="i9A-Sn-MUz"/>
+                                <constraint firstItem="0kg-Ew-vdH" firstAttribute="top" secondItem="XIX-NP-r5Z" secondAttribute="top" id="pTE-lc-2JC"/>
+                                <constraint firstItem="GWh-NE-Qw6" firstAttribute="centerX" secondItem="XIX-NP-r5Z" secondAttribute="centerX" id="yI1-Ak-hIO"/>
+                            </constraints>
+                        </view>
+                        <sections>
+                            <tableViewSection headerTitle="Sort by" id="vhJ-BY-CPr">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="Fi7-b5-eOa">
+                                        <rect key="frame" x="0.0" y="78" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fi7-b5-eOa" id="rlA-Ir-FTh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Match" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZn-Qb-m5F">
+                                                    <rect key="frame" x="164" y="0.0" width="86.5" height="50"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn-downArrow" translatesAutoresizingMaskIntoConstraints="NO" id="U4p-Vl-Smg">
+                                                    <rect key="frame" x="255.5" y="17.5" width="15" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="AMg-e9-Ahn"/>
+                                                        <constraint firstAttribute="width" constant="15" id="gBK-8i-mTc"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="U4p-Vl-Smg" firstAttribute="centerY" secondItem="SZn-Qb-m5F" secondAttribute="centerY" id="A90-Wr-v2a"/>
+                                                <constraint firstItem="U4p-Vl-Smg" firstAttribute="leading" secondItem="SZn-Qb-m5F" secondAttribute="trailing" constant="5" id="ZUh-gn-3hH"/>
+                                                <constraint firstAttribute="bottom" secondItem="SZn-Qb-m5F" secondAttribute="bottom" id="fVK-Nf-QtO"/>
+                                                <constraint firstItem="SZn-Qb-m5F" firstAttribute="centerX" secondItem="rlA-Ir-FTh" secondAttribute="centerX" id="k6b-vF-G41"/>
+                                                <constraint firstItem="SZn-Qb-m5F" firstAttribute="top" secondItem="rlA-Ir-FTh" secondAttribute="top" id="z4T-BN-Eus"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="SortCell" label="SortCell">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Minimum order amount" id="uCp-V2-53o">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="Vus-QM-G4W" imageView="kLD-fj-NI6" rowHeight="50" style="IBUITableViewCellStyleDefault" id="Xob-1p-dkf">
+                                        <rect key="frame" x="0.0" y="184" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xob-1p-dkf" id="ASt-mQ-ESW">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Show all" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vus-QM-G4W">
+                                                    <rect key="frame" x="59" y="0.0" width="335" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="icn-radioBtnOn" id="kLD-fj-NI6">
+                                                    <rect key="frame" x="20" y="13" width="24" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="MinOrderShowAll" label="MinOrderShowAll">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="gIK-VC-BvY" imageView="SH3-Zc-gji" rowHeight="50" style="IBUITableViewCellStyleDefault" id="g1J-7o-0wH">
+                                        <rect key="frame" x="0.0" y="234" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g1J-7o-0wH" id="WbQ-qp-fsq">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="10.00 € or less" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gIK-VC-BvY">
+                                                    <rect key="frame" x="59" y="0.0" width="335" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="icn-radioBtnOff" id="SH3-Zc-gji">
+                                                    <rect key="frame" x="20" y="13" width="24" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="MinOrderLessThan10" label="MinOrderLessThan10">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="e87-83-Ykv" imageView="2el-fC-uiq" rowHeight="50" style="IBUITableViewCellStyleDefault" id="5Ad-xC-HST" customClass="LFRestaurantTableViewCell" customModule="LieferandoAssignment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="284" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Ad-xC-HST" id="uoc-xx-OjQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="15.00 € or less" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e87-83-Ykv">
+                                                    <rect key="frame" x="59" y="0.0" width="335" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="icn-radioBtnOff" id="2el-fC-uiq">
+                                                    <rect key="frame" x="20" y="13" width="24" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="MinOrderLessThan15" label="MinOrderLessThan15">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Delivery cost" id="xRG-Jf-5am">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="Hhs-gS-HXM" imageView="LCZ-wP-mfv" rowHeight="50" style="IBUITableViewCellStyleDefault" id="mA5-d4-WHI">
+                                        <rect key="frame" x="0.0" y="390" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mA5-d4-WHI" id="y3u-Eq-e06">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Show All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hhs-gS-HXM">
+                                                    <rect key="frame" x="59" y="0.0" width="335" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="icn-radioBtnOn" id="LCZ-wP-mfv">
+                                                    <rect key="frame" x="20" y="13" width="24" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="DeliveryCostShowAll" label="DeliveryCostShowAll">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="SQy-ul-3qO" imageView="SIS-4x-AAp" rowHeight="50" style="IBUITableViewCellStyleDefault" id="NjP-tG-tp1">
+                                        <rect key="frame" x="0.0" y="440" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NjP-tG-tp1" id="9dB-WB-jp8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SQy-ul-3qO">
+                                                    <rect key="frame" x="59" y="0.0" width="335" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="icn-radioBtnOff" id="SIS-4x-AAp">
+                                                    <rect key="frame" x="20" y="13" width="24" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="DeliveryCostFree" label="DeliveryCostFree">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="OfM-31-WfZ" imageView="D6n-cF-vwM" rowHeight="50" style="IBUITableViewCellStyleDefault" id="hdw-D5-id0">
+                                        <rect key="frame" x="0.0" y="490" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hdw-D5-id0" id="hqz-Ws-bkt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Less than 1.00  €" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OfM-31-WfZ">
+                                                    <rect key="frame" x="59" y="0.0" width="335" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="icn-radioBtnOff" id="D6n-cF-vwM">
+                                                    <rect key="frame" x="20" y="13" width="24" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="DeliveryCostLessThan1" label="DeliveryCostLessThan1">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="JTI-Vo-c5U" imageView="7FT-Rx-O4W" rowHeight="50" style="IBUITableViewCellStyleDefault" id="Wgk-Dv-b1V">
+                                        <rect key="frame" x="0.0" y="540" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wgk-Dv-b1V" id="Rl7-gY-kBl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Less than 2.50  €" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JTI-Vo-c5U">
+                                                    <rect key="frame" x="59" y="0.0" width="335" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="icn-radioBtnOff" id="7FT-Rx-O4W">
+                                                    <rect key="frame" x="20" y="13" width="24" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="DeliveryCostLessThan2.5" label="DeliveryCostLessThan2.5">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Restaurant ratings" footerTitle="" id="Pub-2K-UBj">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="Zfz-QO-MVw">
+                                        <rect key="frame" x="0.0" y="646" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zfz-QO-MVw" id="FFr-ty-HaV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pZ8-i9-2Ol" customClass="StarRatingView" customModule="LieferandoAssignment" customModuleProvider="target">
+                                                    <rect key="frame" x="126" y="10" width="162" height="30"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="StarRatingView" label="StarRatingView">
+                                                        <bool key="isElement" value="YES"/>
+                                                    </accessibility>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="point">
+                                                            <real key="value" value="30"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="max">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="min">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="current">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                            <color key="value" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="typeString" value="fill"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pZ8-i9-2Ol" firstAttribute="centerX" secondItem="FFr-ty-HaV" secondAttribute="centerX" id="VI4-2o-plh"/>
+                                                <constraint firstItem="pZ8-i9-2Ol" firstAttribute="centerY" secondItem="FFr-ty-HaV" secondAttribute="centerY" id="Ykz-Ba-w1f"/>
+                                                <constraint firstItem="pZ8-i9-2Ol" firstAttribute="top" secondItem="FFr-ty-HaV" secondAttribute="top" constant="10" id="ZlF-Ir-w1q"/>
+                                                <constraint firstAttribute="bottom" secondItem="pZ8-i9-2Ol" secondAttribute="bottom" constant="10" id="t58-vy-ZqW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="RatingFilterCell" label="RatingFilterCell">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="FilterTableview"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="dataSource" destination="OB8-rA-7Ec" id="SlB-7f-303"/>
+                            <outlet property="delegate" destination="OB8-rA-7Ec" id="7uX-0p-0dB"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="ratingView" destination="pZ8-i9-2Ol" id="v35-R4-kr3"/>
+                        <outlet property="sortDataPicker" destination="NEa-Ki-9dz" id="ei8-5W-SLh"/>
+                        <outlet property="sortDataPickerView" destination="aeQ-iX-3jF" id="4VF-OV-aGt"/>
+                        <outlet property="sortType" destination="SZn-Qb-m5F" id="0Uv-7u-XGT"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vCO-p3-t6W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="aeQ-iX-3jF">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSl-mF-Itb">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="HO8-hE-GXe"/>
+                                <constraint firstAttribute="height" constant="44" id="p69-5H-RSX"/>
+                            </constraints>
+                            <items>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="XR6-EV-exH"/>
+                                <barButtonItem title="Select" id="RtR-A7-KjC">
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="SortSelectButton"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="closeSortPicker" destination="OB8-rA-7Ec" id="fZc-SE-nFP"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEa-Ki-9dz">
+                            <rect key="frame" x="0.0" y="44" width="414" height="156"/>
+                            <accessibility key="accessibilityConfiguration" identifier="SortPicker" label="SortPicker">
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="SortPicker"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="dataSource" destination="OB8-rA-7Ec" id="Yjd-NW-fvS"/>
+                                <outlet property="delegate" destination="OB8-rA-7Ec" id="d6R-Nr-jID"/>
+                            </connections>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <accessibility key="accessibilityConfiguration" identifier="sortPickerView" label="sortPickerView">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstItem="nSl-mF-Itb" firstAttribute="top" secondItem="aeQ-iX-3jF" secondAttribute="top" id="DRf-DK-brB"/>
+                        <constraint firstAttribute="trailing" secondItem="nSl-mF-Itb" secondAttribute="trailing" id="HZe-J2-kJr"/>
+                        <constraint firstItem="NEa-Ki-9dz" firstAttribute="top" secondItem="nSl-mF-Itb" secondAttribute="bottom" id="Hct-gD-oyJ"/>
+                        <constraint firstItem="NEa-Ki-9dz" firstAttribute="top" secondItem="nSl-mF-Itb" secondAttribute="bottom" id="Qfx-fR-xm5"/>
+                        <constraint firstAttribute="trailing" secondItem="NEa-Ki-9dz" secondAttribute="trailing" id="UUt-sB-4SP"/>
+                        <constraint firstItem="nSl-mF-Itb" firstAttribute="leading" secondItem="aeQ-iX-3jF" secondAttribute="leading" id="aaR-5y-l0r"/>
+                        <constraint firstAttribute="bottom" secondItem="NEa-Ki-9dz" secondAttribute="bottom" id="oJe-4k-Mr8"/>
+                        <constraint firstItem="NEa-Ki-9dz" firstAttribute="leading" secondItem="aeQ-iX-3jF" secondAttribute="leading" id="yYs-qZ-Cie"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="abm-tx-au9"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1035" y="78"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h6m-HC-2YI">
+            <objects>
+                <navigationController id="jqw-cA-R1B" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="s3H-rr-SKq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7yN-Iz-l5w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DFb-KN-emT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-954" y="78"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icn-close" width="24" height="24"/>
+        <image name="icn-dashboard" width="24" height="24"/>
+        <image name="icn-downArrow" width="24" height="24"/>
+        <image name="icn-filter" width="24" height="24"/>
+        <image name="icn-radioBtnOff" width="24" height="24"/>
+        <image name="icn-radioBtnOn" width="24" height="24"/>
+    </resources>
+</document>
